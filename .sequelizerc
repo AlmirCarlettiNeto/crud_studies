@@ -1,0 +1,8 @@
+const path = require("path");
+
+module.exports = {
+  config: path.resolve(__dirname, "src", "config", "database.js"),
+  "migrations-path": path.resolve(__dirname, "src", "database", "migrations"),
+};
+
+// esse arquivo serve para que o sequelize-cli encontre os diretórios corretamente. Assim, podemos executar comandos no terminal para manipular diretamente nosso banco de dados como, por exemplo, npx sequelize create:db
