@@ -1,6 +1,6 @@
 // Model é uma classe base que o Sequelize fornece para criar modelos que represntam tabelas no banco de dados. DataTypes é um objeto que contém os tipos de dados que você pode usar para definir os campos/colunas da sua tabela, como "STRING", "INTEGER", "DATE", etc.
 
-const { Model, DataTypes } = require("sequelize");
+import { Model, DataTypes } from "sequelize";
 
 class User extends Model {
   /* extends Model: Significa que User está herdando de Model; portanto, User é uma subclasse da classe Model. O Model é uma classe fornecida pelo Sequelize que contém métodos e propriedades úteis para interagir com a tabela do banco de dados. Isso significa que a classe User terá todos os métodos e funcionalidades da classe Model do Sequelize. Isso inclui coisas como criar, ler, atualizar e deletar registros na tabela do banco de dados */
@@ -22,7 +22,7 @@ class User extends Model {
   }
 }
 
-module.exports = User;
+export { User };
 
 /* 
 - A classe User representa a tabela User no banco de dados

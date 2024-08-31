@@ -1,11 +1,11 @@
-const Sequelize = require("sequelize");
-const configDB = require("../config/database");
-const User = require("../models/User.js");
+import Sequelize from "sequelize";
+import configDB from "../config/database";
+import { init } from "../models/User.js";
 const connection = new Sequelize(configDB); // lembrando que configDB é um objeto que contém informações sobre o banco
 
-User.init(connection);
+init(connection);
 
-module.exports = connection;
+export { connection };
 
 /* 
 O sequelize é ORM(Object-Relational Mapping) que permite a manipulação de banco de dados diretamente pelo javascript ou typescript 
