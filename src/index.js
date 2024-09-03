@@ -1,11 +1,10 @@
 import express, { json } from "express";
-import routes from "./routes.js";
+import router from "./routes.js";
+import "./database/index.js" // isso serve para garantir que o código dentro de database seja executado (ao chamar a pasta o node automaticamente busca pelo arquivo index.js)
 const app = express();
 
-import "./database"; // isso serve para garantir que o código dentro de database seja executado (ao chamar a pasta o node automaticamente busca pelo arquivo index.js)
-
 app.use(json());
-app.use(routes);
+app.use(router);
 
 app.listen(3030, () => {
   console.log('Server is running on port 3030')

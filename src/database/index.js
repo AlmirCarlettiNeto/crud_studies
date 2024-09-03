@@ -1,9 +1,9 @@
 import Sequelize from "sequelize";
-import configDB from "../config/database";
-import { init } from "../models/User.js";
+import configDB from "../config/database.cjs";
+import { User } from "../models/User.js";
 const connection = new Sequelize(configDB); // lembrando que configDB é um objeto que contém informações sobre o banco
 
-init(connection);
+User.init(connection);
 
 export { connection };
 

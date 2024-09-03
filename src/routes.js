@@ -4,6 +4,6 @@ import { createUser } from './controller/UserController.js';
 const router = Router();
 
 // método para criar um novo usuário
-router.post("/", createUser);
+router.post("/create-user", createUser);
 
-export { router };
+export default router;
