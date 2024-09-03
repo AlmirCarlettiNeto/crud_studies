@@ -27,7 +27,7 @@ export { User };
 /* 
 - A classe User representa a tabela User no banco de dados
 
-- Para realmente o que acontesse dentro da declaração da classe, antes precisamos compreender o que exatamente é um método estático. Em JavaScript, é uma função que pertence à classe, e não a uma instância específica da classe. Isso significa que você pode chamar o método diretamente na classe, sem precisar criar um objeto a partir dela. Por exemplo:
+- Para realmente entender o que acontesse dentro da declaração da classe, antes precisamos compreender o que exatamente é um método estático. Em JavaScript, é uma função que pertence à classe, e não a uma instância específica da classe. Isso significa que você pode chamar o método diretamente na classe, sem precisar criar um objeto a partir dela. Por exemplo:
 
 class Exemplo {
   static metodoEstatico() {

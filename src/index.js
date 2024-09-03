@@ -1,19 +1,19 @@
 import express, { json } from "express";
 import router from "./routes.js";
-import "./database/index.js" // isso serve para garantir que o código dentro de database seja executado (ao chamar a pasta o node automaticamente busca pelo arquivo index.js)
+import "./database/index.js"; // isso serve para garantir que o código dentro de database seja executado (ao chamar a pasta o node automaticamente busca pelo arquivo index.js)
 const app = express();
 
 app.use(json());
 app.use(router);
 
 app.listen(3030, () => {
-  console.log('Server is running on port 3030')
+  console.log("Server is running on port 3030");
 });
 
 /* 
 O método app.use(express.json()) no Express.js é utilizado para adicionar um middleware que faz o parsing do corpo das requisições HTTP com conteúdo em JSON (Middleware são como "filtros" ou "etapas" que uma requisição passa antes de chegar à resposta final. Eles são úteis para tarefas como autenticação, logging, tratamento de erros, entre outras).
 
-Aqui está o que ele faz:
+Funciona da seguinte forma:
 
 Parsing JSON: Quando uma requisição é enviada para o servidor com um corpo JSON (normalmente em requisições POST, PUT, ou PATCH), o middleware express.json() interpreta o conteúdo JSON e o transforma em um objeto JavaScript acessível pela propriedade req.body.
 
